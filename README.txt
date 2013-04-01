@@ -1,6 +1,6 @@
-Rack::Mongoid::Grid
+Rack::MongoidGridFS
 
-  Rack::Mongoid::Grid is used to serve a GridFS file from rack when using the mongoid-grid_fs gem.
+  Rack::MongoidGridFS is used to serve GridFS files from rack using the mongoid-grid_fs gem.
 
 
 Installation
@@ -36,7 +36,7 @@ Cache Control
 Usage
 
   # sinatra app
-  use Rack::Grid, {
+  use Rack::MongoidGridFS, {
     :prefix => 'grid',
     :cache  => "max-age=300, private, must-revalidate"
   }
