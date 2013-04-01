@@ -1,7 +1,14 @@
 Rack::MongoidGridFS
 
-  Rack::MongoidGridFS is used to serve GridFS files from rack using the mongoid-grid_fs gem.
+  Rack::MongoidGridFS is used to serve GridFS files from rack using the
+  mongoid-grid_fs gem
+  (https://github.com/ahoward/mongoid-grid_fs)
 
+  Check out Rack-Thumb to generate thumnails of your images on the fly
+  (https://github.com/akdubya/rack-thumb)
+
+  Also, useful when also used with Rack-Cache or something like Varnish
+  (http://rtomayko.github.io/rack-cache/)
 
 Installation
 
@@ -10,6 +17,7 @@ Installation
 
   # include in your app
   require 'rack/mongoid-gridfs'
+
 
 Prefix
 
