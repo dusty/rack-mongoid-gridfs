@@ -26,7 +26,9 @@ module Rack
     # Get file from GridFS or return a 404
     def grid_request(id)
       begin
-        file = ::Mongoid::GridFS.get(id)
+        unless file = ::Mongoid::GridFS.get(id)
+          return [404, {'Content-Type' => 'text/plain'}, ['File not found.']]
+        end
         headers = {
           'ETag' => file.md5,
           'Last-Modified' => file.uploadDate.httpdate,
